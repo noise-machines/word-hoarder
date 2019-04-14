@@ -1,3 +1,109 @@
+:root {
+  --size: 1440;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color:	hsla(156, 98%, 85%, 1.000); */
+  /* background-image: url(https://images.unsplash.com/photo-1481007553706-bde1ba8e91fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80); */
+  /* background-image: linear-gradient(to top, hsla(208, 61%, 75%, 1.000), hsla(228, 11%, 90%, 1.000)); */
+  background-color:  hsla(208, 61%, 75%, 1.000);
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.hero-title {
+  font-size: calc(125 * 100vw/var(--size));
+  text-transform: uppercase;
+  width: 100%;
+  line-height: 0.9;
+  position: absolute;
+  overflow: hidden;
+}
+
+.opaque.hero-title {
+  clip-path: circle(27% at center);
+}
+
+.opaque.hero-title .hero-text {
+  color: hsla(1, 0%, 100%, 1);
+}
+
+.hero-background {
+  position: absolute;
+  width: 40%;
+  /* background: hsla(37, 100%, 62%, 1.000); */
+  background-image: linear-gradient(to top, hsla(325, 49%, 74%, 1.000), hsla(303, 33%, 48%, 1.000) );
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.hero-background:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.hero-text {
+  text-decoration: none;
+  color: hsla(208, 84%, 98%, 0);
+  -webkit-text-stroke: 3px hsla(208, 84%, 98%, 1.000);
+  /* text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+}
+
+.slide:nth-of-type(1) {
+  transform: translateX(-20%);
+}
+.slide:nth-of-type(2) {
+  transform: translateX(4%);
+}
+.slide:nth-of-type(3) {
+  transform: translateX(-14%);
+}
+.slide:nth-of-type(4) {
+  transform: translateX(17%);
+}
+
+.hero-line {
+  text-align: center;
+  transition: transform 1s ease-in-out;
+}
+
+/*
+.hero {
+  font-size: calc(125 * 100vw/var(--size));
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.left.hero-link {
+  color: black;
+}
+
+.right.hero-link {
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+}
+
+.hero-divider {
+  background-color: black;
+  width: 10px;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+  height: 1em;
+} */
+
 .App {
   text-align: center;
 }

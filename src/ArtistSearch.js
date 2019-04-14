@@ -16,8 +16,7 @@ const useArtists = query => {
     () => {
       debouncedSearchAndSetArtists(query, setArtists)
     },
-    [query],
-    500
+    [query]
   )
   return [artists]
 }
@@ -35,6 +34,7 @@ export default props => {
     <Fragment>
       <input value={query} onChange={onChange} />
       Searching for {query}
+      <br />
       {JSON.stringify(artists, null, 2)}
     </Fragment>
   )
