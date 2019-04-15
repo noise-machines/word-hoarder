@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css'
 import Add from './Add'
 import Subtract from './Subtract'
+import lorem from './lorem'
 
 // const Home = props => {
 //   return (
@@ -17,6 +18,11 @@ import Subtract from './Subtract'
 //     </main>
 //   )
 // }
+
+const LoremIpsumWall = () => {
+  return <div className='background'>{lorem(100)}</div>
+}
+
 const Home = props => {
   // const [slide, setSlide] = useState('')
   // useEffect(() => {
@@ -25,7 +31,8 @@ const Home = props => {
   const [slide] = useState('slide')
   return (
     <React.Fragment>
-      <div className='hero-background' />
+      <LoremIpsumWall />
+      <div className='hero-image' />
       <div className='hero-title'>
         <div className={`${slide} hero-line`}>
           <Link className='hero-text' to={'/add'}>
