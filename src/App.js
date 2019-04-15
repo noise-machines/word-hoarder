@@ -20,7 +20,7 @@ import lorem from './lorem'
 // }
 
 const LoremIpsumWall = () => {
-  return <div className='background'>{lorem(100)}</div>
+  return <div className='background'>{lorem(500)}</div>
 }
 
 const Home = props => {
