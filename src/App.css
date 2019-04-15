@@ -13,14 +13,19 @@ html {
 }
 
 .background {
-  width: 110vw;
-  height: 110vh;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: -0.5em;
-  left: -50px;
+  left: -5vw;
   z-index: -1;
   text-transform: small-caps;
   font-size: 5px;
+  /* color: hsla(1, 0%, 0%, 0.2); */
+  /* color:  hsla(25, 93%, 65%, 1.000); */
+  color:  hsla(190, 48%, 49%, 1.000);
+  overflow: hidden;
+  text-align: left;
 }
 
 .container {
@@ -54,8 +59,13 @@ html {
   /* background: hsla(37, 100%, 62%, 1.000); */
   /* background-image: linear-gradient(to top, hsla(325, 49%, 74%, 1.000), hsla(303, 33%, 48%, 1.000) ); */
   background: hsla(1, 0%, 100%, 1.0);
+  /* background-image: url(https://images.unsplash.com/photo-1501883844334-db3e19fa9ff8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60); */
+  /* background-image: url(https://images.unsplash.com/photo-1494794347578-e22cd4049dad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60); */
+  background-image: url(https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80);
+  background-position: center;
   border-radius: 50%;
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23);
+  /* filter: blur(8px); */
 }
 
 .hero-image:before {
@@ -66,9 +76,9 @@ html {
 
 .hero-text {
   text-decoration: none;
-  /* color: hsla(208, 84%, 98%, 1); */
-  color: hsla(1, 84%, 0%, 1);
-  /* -webkit-text-stroke: 3px hsla(208, 84%, 98%, 1.000); */
+  color: hsla(208, 84%, 98%, 1);
+  color: #333;
+  /* -webkit-text-stroke: 3px #000; */
   /* text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
 }
 
