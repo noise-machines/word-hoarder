@@ -24,7 +24,7 @@ const Home = props => {
   // }, [])
   const [slide] = useState('slide')
   return (
-    <main className='hero'>
+    <React.Fragment>
       <div className='hero-background' />
       <div className='hero-title'>
         <div className={`${slide} hero-line`}>
@@ -36,28 +36,30 @@ const Home = props => {
           <span className='hero-text'>Or</span>
         </div>
         <div className={`${slide} hero-line`}>
-          <Link className='hero-text' to={'/add'}>
+          <Link className='hero-text' to={'/take-away'}>
             Take
           </Link>
         </div>
         <div className={`${slide} hero-line`}>
-          <Link className='hero-text' to={'/add'}>
+          <Link className='hero-text' to={'/take-away'}>
             Away
           </Link>
         </div>
       </div>
-    </main>
+    </React.Fragment>
   )
 }
 
 const App = props => {
   return (
-    <Router>
-      <Route exact path='/' component={Home} />
-      <Route path='/add' component={Add} />
-      <Route path='/subtract' component={Subtract} />
-      <div />
-    </Router>
+    <main className='container'>
+      <Router>
+        <Route exact path='/' component={Home} />
+        <Route path='/add' component={Add} />
+        <Route path='/subtract' component={Subtract} />
+        <div />
+      </Router>
+    </main>
   )
 }
 

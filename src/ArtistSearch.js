@@ -27,15 +27,20 @@ const useQuery = () => {
   return [query, onChange]
 }
 
+const Artist = props => {
+  return <div className='artist'>{props.name}</div>
+}
+
 export default props => {
   const [query, onChange] = useQuery()
   const [artists] = useArtists(query)
   return (
     <Fragment>
-      <input value={query} onChange={onChange} />
-      Searching for {query}
+      <input className='artist-search' value={query} onChange={onChange} />
+      {artists.map(artist => (
+        <Artist key={artist.id} {...artist} />
+      ))}
       <br />
-      {JSON.stringify(artists, null, 2)}
     </Fragment>
   )
 }
