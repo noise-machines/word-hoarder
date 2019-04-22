@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css'
 import Add from './Add'
 import Subtract from './Subtract'
-import lorem from './lorem'
+import TextWall from './TextWall'
 
 // const Home = props => {
 //   return (
@@ -19,10 +19,6 @@ import lorem from './lorem'
 //   )
 // }
 
-const LoremIpsumWall = () => {
-  return <div className='background'>{lorem(500)}</div>
-}
-
 const Home = props => {
   // const [slide, setSlide] = useState('')
   // useEffect(() => {
@@ -30,43 +26,58 @@ const Home = props => {
   // }, [])
   const [slide] = useState('slide')
   return (
-    <React.Fragment>
-      <LoremIpsumWall />
+    // <main className='container'>
+    //   <div className='hero-image' />
+    //   <div className='hero-title'>
+    //     <div className={`${slide} hero-line`}>
+    //       <Link className='hero-text' to={'/add'}>
+    //         Add
+    //       </Link>
+    //     </div>
+    //     <div className={`${slide} hero-line`}>
+    //       <span className='hero-text'>Or</span>
+    //     </div>
+    //     <div className={`${slide} hero-line`}>
+    //       <Link className='hero-text' to={'/take-away'}>
+    //         Take
+    //       </Link>
+    //     </div>
+    //     <div className={`${slide} hero-line`}>
+    //       <Link className='hero-text' to={'/take-away'}>
+    //         Away
+    //       </Link>
+    //     </div>
+    //   </div>
+    // </main>
+    <main className='container'>
       <div className='hero-image' />
       <div className='hero-title'>
         <div className={`${slide} hero-line`}>
           <Link className='hero-text' to={'/add'}>
-            Add
+            Time
           </Link>
         </div>
         <div className={`${slide} hero-line`}>
-          <span className='hero-text'>Or</span>
+          <span className='hero-text'>Stands</span>
         </div>
         <div className={`${slide} hero-line`}>
           <Link className='hero-text' to={'/take-away'}>
-            Take
-          </Link>
-        </div>
-        <div className={`${slide} hero-line`}>
-          <Link className='hero-text' to={'/take-away'}>
-            Away
+            Still
           </Link>
         </div>
       </div>
-    </React.Fragment>
+    </main>
   )
 }
 
 const App = props => {
   return (
-    <main className='container'>
-      <Router>
-        <Route exact path='/' component={Home} />
-        <Route path='/add' component={Add} />
-        <Route path='/subtract' component={Subtract} />
-        <div />
-      </Router>
-    </main>
+    <Router>
+      <Route exact path='/' component={Home} />
+      <Route path='/add' component={Add} />
+      <Route path='/subtract' component={Subtract} />
+      <div />
+    </Router>
   )
 }
 
